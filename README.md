@@ -70,7 +70,7 @@ results = Counter({True:100})
 
 2. Restore (unpickle) and use the classifier.
 
-```
+```python
 >>> import random_mac
 
 # Find a MAC address in a host's ARP cache, a switch's MAC address table, etc.
