@@ -17,10 +17,10 @@ random-mac requires Python 3.x and the pip package.  It also requires the follow
 
 1. Clone or download this repository.
 
-2. Using `sudo`, run `pip` with the `install` command and the `--requirement` option.
+2. Using `sudo`, run `pip` with the `install` command.
 
 ```bash
-sudo pip install --requirement requirements.txt .
+sudo pip install .
 ```
 
 
