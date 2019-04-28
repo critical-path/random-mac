@@ -16,5 +16,11 @@ setuptools.setup(
     "Programming Language :: Python :: 3"
   ],
   keywords="python machine-learning ml random media-access-control mac mac-address",
-  packages=setuptools.find_packages()
+  packages=setuptools.find_packages(),
+  install_requires=[
+    "macaddress @ git+https://github.com/critical-path/macaddress.git",
+    "numpy",
+    "pandas",
+    "scikit-learn"
+  ]
 )
