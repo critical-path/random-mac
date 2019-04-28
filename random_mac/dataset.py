@@ -71,6 +71,7 @@ def make_random_hexadecimal_digit_strings(number):
   Parameters
   ----------
   number : int
+    The number of hexadecimal strings to make.
 
   Returns
   -------
@@ -94,13 +95,13 @@ def get_mac_features(digit_string):
   Parameters
   ----------
   digit_string : str
-    A 48-bit hexadecimal string.
+    A 48-bit hexadecimal string with which
+    to instantiate `MediaAccessControlAddress`.
 
   Returns
   -------
   n/a : tuple
-    A six-tuple with the feature of a MAC address
-    associated with a hexadecimal string.
+    A six-tuple with the features of a MAC address.
 
     The features are `type`, `has_oui`, `has_cid`, 
     `is_broadcast`, `is_multicast`, and `is_unicast`.
@@ -130,8 +131,7 @@ def get_features(digit_strings):
   -------
   n/a : list
     A list of tuples, where each tuple contains 
-    the features of a MAC address associated with 
-    a single hexadecimal_string.
+    the features of a MAC address.
   """
 
   return list(
@@ -150,8 +150,7 @@ def normalize_features(features):
   ----------
   features : list
     A list of tuples, where each tuple contains 
-    the features of a MAC address associated with 
-    a single hexadecimal_string.
+    the features of a MAC address.
 
   Returns
   -------
@@ -231,7 +230,7 @@ def make(multiple):
   Parameters
   ----------
   multiple : int
-    The number of random MAC addresses to  create
+    The number of random MAC addresses to create
     for every non-random MAC address.
 
   Returns
