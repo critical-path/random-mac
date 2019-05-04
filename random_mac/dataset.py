@@ -115,6 +115,8 @@ def get_mac_features(digit_string):
     mac.is_broadcast,
     mac.is_multicast,
     mac.is_unicast,
+    mac.is_uaa,
+    mac.is_laa
   )
 
 
