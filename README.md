@@ -20,7 +20,7 @@ random-mac requires Python 3.x and the pip package.  It also requires the follow
 2. Using `sudo`, run `pip` with the `install` command.
 
 ```bash
-sudo pip install .
+$ sudo pip install .
 ```
 
 
