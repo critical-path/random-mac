@@ -6,6 +6,10 @@ import random_mac
 
 def main():
   # Make a dataset.
+  #
+  # Use the `multiple` argument to determine the ratio of 
+  # randomly-generated MAC addresses to non-randomly-generated
+  # MAC addresses in the dataset.
 
   print("making dataset...", end="")
   multiple = 2
@@ -40,7 +44,7 @@ def main():
 
   for index in range(100):
     address = os.getrandom(6).hex()
-    result = random_mac.classifier.is_random_mac(classifier, address)
+    result = random_mac.is_random_mac(classifier, address)
     counter[result] += 1
 
   print("done! (results = {})".format(str(counter)))

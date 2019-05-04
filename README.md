@@ -35,6 +35,10 @@ sudo pip install .
 >>> import random_mac
 
 # Make a dataset.
+#
+# Use the `multiple` argument to determine the ratio of 
+# randomly-generated MAC addresses to non-randomly-generated
+# MAC addresses in the dataset.
 
 >>> multiple = 2
 >>> data, labels = random_mac.dataset.make(multiple)
@@ -61,7 +65,7 @@ score = 83%
 >>> counter = collections.Counter()
 >>> for index in range(100):
 ...   address = os.getrandom(6).hex()
-...   result = random_mac.classifier.is_random_mac(classifier, address)
+...   result = random_mac.is_random_mac(classifier, address)
 ...   counter[result] += 1
 ...
 >>> print("results = {}".format(str(counter)))
@@ -80,7 +84,7 @@ results = Counter({True:77, False:23})
 # Restore and use the classifier.
 
 >>> classifier = random_mac.classifier.restore("random-mac-classifier.pickled")
->>> result = random_mac.classifier.is_random_mac(classifier, address)
+>>> result = random_mac.is_random_mac(classifier, address)
 >>> print(result)
 True
 ```
