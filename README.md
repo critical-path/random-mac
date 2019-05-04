@@ -36,7 +36,7 @@ sudo pip install .
 
 # Make a dataset.
 
->>> multiple = 5
+>>> multiple = 2
 >>> data, labels = random_mac.dataset.make(multiple)
 
 # Split the dataset.
@@ -65,7 +65,7 @@ score = 83%
 ...   counter[result] += 1
 ...
 >>> print("results = {}".format(str(counter)))
-results = Counter({True:100})
+results = Counter({True:77, False:23})
 ```
 
 2. Restore (unpickle) and use the classifier.

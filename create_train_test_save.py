@@ -8,7 +8,7 @@ def main():
   # Make a dataset.
 
   print("making dataset...", end="")
-  multiple = 5
+  multiple = 2
   data, labels = random_mac.dataset.make(multiple)
   print("done!")
 
