@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
   name="random-mac",
-  version="0.3.0",
+  version="0.4.0",
   description="Use machine learning to identify randomly-generated MAC addresses.",
   url="https://github.com/critical-path/random-mac",
   author="critical-path",

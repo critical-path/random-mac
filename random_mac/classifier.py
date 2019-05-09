@@ -73,7 +73,7 @@ def test(classifier, data, labels):
   return classifier.score(data, labels)
 
 
-def save(classifier, file):
+def save(classifier, file="random-mac-classifier.pickled"):
   """
   Save (pickle) a classifier.
 
@@ -90,7 +90,7 @@ def save(classifier, file):
     pickle.dump(classifier, destination)    
 
 
-def restore(file):
+def restore(file="random-mac-classifier.pickled"):
   """
   Restore (unpickle) a classifier.
 

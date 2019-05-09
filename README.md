@@ -1,6 +1,6 @@
-## random-mac v0.3.0
+## random-mac v0.4.0
 
-Use machine learning to identify randomly-generated MAC addresses.
+This is a fun, little experiment that uses machine learning to identify randomly-generated MAC addresses.
 
 
 ## Dependencies
