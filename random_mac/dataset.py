@@ -104,7 +104,8 @@ def get_mac_features(digit_string):
     A six-tuple with the features of a MAC address.
 
     The features are `type`, `has_oui`, `has_cid`, 
-    `is_broadcast`, `is_multicast`, and `is_unicast`.
+    `is_broadcast`, `is_multicast`, `is_unicast`,
+    `is_uaa`, and `is_laa`.
   """
 
   mac = macaddress.MediaAccessControlAddress(digit_string)
@@ -225,7 +226,7 @@ def normalize_labels(labels):
   return numpy.array(labels)
 
 
-def make(multiple):
+def make(multiple, oui_file="./oui.csv", cid_file="./cid.csv"):
   """
   Make a dataset for training and testing purposes.
 
@@ -242,8 +243,8 @@ def make(multiple):
   """
 
   # Get OUIs and CIDs.
-  ouis = get_ieee_assignments("oui.csv")
-  cids = get_ieee_assignments("cid.csv")
+  ouis = get_ieee_assignments(oui_file)
+  cids = get_ieee_assignments(cid_file)
 
   # Make non-random and random hexadecimal strings.
   digits = make_hexadecimal_digit_strings(ouis + cids)

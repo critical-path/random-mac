@@ -1,4 +1,4 @@
-## random-mac v0.2.0
+## random-mac v0.3.0
 
 Use machine learning to identify randomly-generated MAC addresses.
 
