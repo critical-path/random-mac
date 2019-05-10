@@ -81,7 +81,7 @@ score = 83%
 
 >>> counter = collections.Counter()
 >>> for index in range(100):
-...   address = os.getrandom(6).hex()
+...   address = os.urandom(6).hex()
 ...   result = random_mac.is_random_mac(classifier, address)
 ...   counter[result] += 1
 ...
