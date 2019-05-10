@@ -1,0 +1,6 @@
+[run]
+branch = True
+source = random_mac
+
+[report]
+exclude_lines = is_random_mac

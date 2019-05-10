@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
   name="random-mac",
-  version="0.4.0",
+  version="0.5.0",
   description="Use machine learning to identify randomly-generated MAC addresses.",
   url="https://github.com/critical-path/random-mac",
   author="critical-path",
@@ -22,5 +22,12 @@ setuptools.setup(
     "numpy",
     "pandas",
     "scikit-learn"
-  ]
+  ],
+  extras_require={
+    "test": [
+      "coveralls",
+      "pytest>=3.6",
+      "pytest-cov"
+    ]
+  }
 )

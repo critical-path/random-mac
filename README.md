@@ -1,4 +1,4 @@
-## random-mac v0.4.0
+## random-mac v0.5.0
 
 This is a fun, little experiment that uses machine learning to identify randomly-generated MAC addresses.
 
@@ -7,13 +7,30 @@ This is a fun, little experiment that uses machine learning to identify randomly
 
 random-mac requires Python 3.x and the pip package.  It also requires the following packages.
 
+__Usage__
 - [macaddress](https://github.com/critical-path/macaddress)
 - numpy
 - pandas
 - scikit-learn
 
+__Testing__
+- coveralls
+- pytest
+- pytest-cov
 
-## Installing random-mac
+
+## Installing random-mac with test cases and testing dependencies
+
+1. Clone or download this repository.
+
+2. Using `sudo`, run `pip` with the `install` command and the `--editable` option.
+
+```bash
+$ sudo pip install --editable .[test]
+```
+
+
+## Installing random-mac without test cases or testing dependencies
 
 1. Clone or download this repository.
 
@@ -88,6 +105,15 @@ results = Counter({True:77, False:23})
 >>> print(result)
 True
 ```
+
+
+## Testing random-mac after installation
+
+1. Run `pytest` with the `--cov` and `--cov-report` options.
+
+```bash
+$ pytest --cov --cov-report=term-missing
+``` 
 
 
 ## A note on random-mac
