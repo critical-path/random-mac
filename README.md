@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/critical-path/random-mac.svg?branch=master)](https://travis-ci.com/critical-path/random-mac) [![Coverage Status](https://coveralls.io/repos/github/critical-path/random-mac/badge.svg?branch=master)](https://coveralls.io/github/critical-path/random-mac?branch=master)
+
 ## random-mac v0.5.0
 
 This is a fun, little experiment that uses machine learning to identify randomly-generated MAC addresses.
