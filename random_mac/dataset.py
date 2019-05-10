@@ -58,7 +58,7 @@ def make_hexadecimal_digit_strings(assignments):
 
   return list(
     map(
-      lambda assignment: assignment + os.getrandom(3).hex(),
+      lambda assignment: assignment + os.urandom(3).hex(),
       assignments
     )
   )
@@ -82,7 +82,7 @@ def make_random_hexadecimal_digit_strings(number):
 
   return list(
     map(
-      lambda x: os.getrandom(6).hex(),
+      lambda x: os.urandom(6).hex(),
       range(number)
     )
   )

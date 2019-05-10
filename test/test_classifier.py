@@ -1,4 +1,3 @@
-import os
 import numpy
 import random_mac.classifier
 import sklearn.linear_model
