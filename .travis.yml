@@ -16,6 +16,9 @@ python:
 
 # job phases
 
+before_install:
+  - pip install --upgrade pip
+
 install:
   - pip install --editable .[test]
 
