@@ -55,12 +55,17 @@ $ sudo pip install .
 
 # Make a dataset.
 #
-# Use the `multiple` argument to determine the ratio of 
-# randomly-generated MAC addresses to non-randomly-generated
-# MAC addresses in the dataset.
+# We use the `multiple` argument to make two
+# randomly-generated MAC addresses for every 
+# non-randomly-generated one.
 
 >>> multiple = 2
->>> data, labels = random_mac.dataset.make(multiple)
+>>> dataset = random_mac.dataset.make(
+...   multiple,
+...   oui_file="./oui.csv", 
+...   cid_file="./cid.csv"
+... )
+>>> data, labels = dataset
 
 # Split the dataset.
 
@@ -77,7 +82,10 @@ score = 83%
 
 # Save the classifier.
 
->>> random_mac.classifier.save(classifier, "random-mac-classifier.pickled")
+>>> random_mac.classifier.save(
+...   classifier, 
+...   file="./random-mac-classifier.pickled"
+... )
 
 # Run the classifier with new data.
 
@@ -102,7 +110,7 @@ results = Counter({True:77, False:23})
 
 # Restore and use the classifier.
 
->>> classifier = random_mac.classifier.restore("random-mac-classifier.pickled")
+>>> classifier = random_mac.classifier.restore(file="./random-mac-classifier.pickled")
 >>> result = random_mac.is_random_mac(classifier, address)
 >>> print(result)
 True

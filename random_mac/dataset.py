@@ -236,6 +236,14 @@ def make(multiple, oui_file="./oui.csv", cid_file="./cid.csv"):
     The number of random MAC addresses to create
     for every non-random MAC address.
 
+  oui_file : str
+    The name of the file with OUIs assigned by 
+    the IEEE.
+
+  cid_file : str
+    The name of the file with CIDs assigned by
+    the IEEE.
+
   Returns
   -------
   n/a : tuple

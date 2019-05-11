@@ -7,39 +7,39 @@ import random_mac
 def main():
   # Make a dataset.
   #
-  # Use the `multiple` argument to determine the ratio of 
-  # randomly-generated MAC addresses to non-randomly-generated
-  # MAC addresses in the dataset.
+  # We use the `multiple` argument to make two
+  # randomly-generated MAC addresses for every 
+  # non-randomly-generated one.
 
-  print("making dataset...", end="")
   multiple = 2
-  data, labels = random_mac.dataset.make(multiple)
-  print("done!")
+  dataset = random_mac.dataset.make(
+    multiple, 
+    oui_file="./oui.csv", 
+    cid_file="./cid.csv"
+  )
+  data, labels = dataset
 
   # Split the dataset.
 
-  print("splitting dataset...", end="")
   split = sklearn.model_selection.train_test_split(data, labels)
   train_data, test_data, train_labels, test_labels = split
-  print("done!")
 
   # Make, train, and test the classifier.
 
-  print("making, training, and testing classifier...", end="")
   classifier = random_mac.classifier.make()
   classifier = random_mac.classifier.train(classifier, train_data, train_labels)
   score = random_mac.classifier.test(classifier, test_data, test_labels)
-  print("done! (score = {}%)".format(str(int(100 * score))))
+  print("score = {}%".format(str(int(100 * score))))
 
   # Save the classifier.
 
-  print("saving classifier...", end="")
-  random_mac.classifier.save(classifier, "random-mac-classifier.pickled")
-  print("done!")
+  random_mac.classifier.save(
+    classifier, 
+    file="./random-mac-classifier.pickled"
+  )
 
   # Run the classifier with new data.
 
-  print("running classifier against new data...", end="")
   counter = collections.Counter()
 
   for index in range(100):
@@ -47,7 +47,7 @@ def main():
     result = random_mac.is_random_mac(classifier, address)
     counter[result] += 1
 
-  print("done! (results = {})".format(str(counter)))
+  print("results = {}".format(str(counter)))
 
 
 if __name__ == "__main__":
