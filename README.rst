@@ -4,6 +4,10 @@
 .. image:: https://coveralls.io/repos/github/critical-path/random-mac/badge.svg?branch=master
    :target: https://coveralls.io/github/critical-path/random-mac?branch=master
 
+.. image:: https://readthedocs.org/projects/random-mac/badge/?version=latest
+   :target: https://random-mac.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
 Introduction
 ============
 
