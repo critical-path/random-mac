@@ -138,7 +138,7 @@ To restore (unpickle) a classifier, run the following command from your Python i
 Workflows for random-mac
 ========================
 
-Make, Train, Test, and Save
+Make, train, test, and save
 ---------------------------
 
 .. code-block:: python
@@ -183,7 +183,7 @@ Make, Train, Test, and Save
   ...  file="./random-mac-classifier.pickled"
   ... )
 
-Restore and Use
+Restore and use
 ---------------
 
 .. code-block:: python
