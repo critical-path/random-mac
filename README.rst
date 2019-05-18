@@ -39,7 +39,7 @@ To install it without test-related dependencies, run the following command from 
 
    [user@host ~]$ sudo pip install git+https://github.com/critical-path/random-mac.git
 
-(If necessary, replace :code:`pip` with :code:`pip3` in any of the scenarios above.)
+(If necessary, replace :code:`pip` with :code:`pip3`.)
 
 
 Using random-mac
