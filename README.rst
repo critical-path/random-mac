@@ -79,7 +79,7 @@ random-mac needs to use some data and labels for training while reserving others
 
 .. code-block:: python
 
-   >>> training_data, testing_data, training_labels, testing_labels = sklearn.model_selection.test_train_split(data, labels)
+   >>> training_data, testing_data, training_labels, testing_labels = sklearn.model_selection.train_test_split(data, labels)
 
 Making a classifier
 -------------------
@@ -158,7 +158,7 @@ Make, train, test, and save
 
    # Split the dataset.
 
-   >>> training_data, testing_data, training_labels, testing_labels = sklearn.model_selection.test_train_split(data, labels)
+   >>> training_data, testing_data, training_labels, testing_labels = sklearn.model_selection.train_test_split(data, labels)
 
    # Make, train, and test a classifier. 
 
