@@ -210,7 +210,7 @@ Restore and Use
 Testing random-mac
 ==================
 
-To conduct dynamic (unit) tests, run the following command from your shell.
+To conduct testing, run the following command from your shell.
 
 .. code-block:: console
 
