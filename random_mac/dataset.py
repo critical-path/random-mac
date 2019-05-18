@@ -101,7 +101,7 @@ def get_mac_features(digit_string):
   Returns
   -------
   tuple
-    A six-tuple with the features of a MAC address.
+    An eight-tuple with the features of a MAC address.
 
     The features are `type`, `has_oui`, `has_cid`, 
     `is_broadcast`, `is_multicast`, `is_unicast`,
