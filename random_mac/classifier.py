@@ -3,7 +3,7 @@ This module contains classifier-related functions.
 """
 
 
-import pickle
+import joblib
 import sklearn.linear_model
 import random_mac.dataset
 
@@ -87,7 +87,7 @@ def save(classifier, file="random-mac-classifier.pickled"):
   """
 
   with open(file, "wb") as destination:
-    pickle.dump(classifier, destination)    
+    joblib.dump(classifier, destination)    
 
 
 def restore(file="random-mac-classifier.pickled"):
@@ -106,7 +106,7 @@ def restore(file="random-mac-classifier.pickled"):
   """
 
   with open(file, "rb") as source:
-    return pickle.load(source)
+    return joblib.load(source)
 
 
 def is_random_mac(classifier, address):

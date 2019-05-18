@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
   name="random-mac",
-  version="0.6.0",
+  version="0.7.0",
   description="Use machine learning to identify randomly-generated MAC addresses.",
   url="https://github.com/critical-path/random-mac",
   author="critical-path",
@@ -18,6 +18,7 @@ setuptools.setup(
   keywords="python machine-learning ml random media-access-control mac mac-address",
   packages=setuptools.find_packages(),
   install_requires=[
+    "joblib",
     "macaddress @ git+https://github.com/critical-path/macaddress.git",
     "numpy",
     "pandas",
