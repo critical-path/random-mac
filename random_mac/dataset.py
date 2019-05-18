@@ -25,7 +25,7 @@ def get_ieee_assignments(file):
 
   Returns
   -------
-  n/a : list
+  list
     A list of 24-bit OUIs or CIDs assigned by the IEEE.
   """
 
@@ -50,7 +50,7 @@ def make_hexadecimal_digit_strings(assignments):
 
   Returns
   -------
-  n/a : list
+  list
     A list of 48-bit hexadecimal strings, where each
     string is the concatenation of a 24-bit OUI/CID and
     24 random bits.
@@ -75,7 +75,7 @@ def make_random_hexadecimal_digit_strings(number):
 
   Returns
   -------
-  n/a : list
+  list
     A list of 48-bit hexadecimal strings, where each
     string is 48 random bits.
   """
@@ -100,7 +100,7 @@ def get_mac_features(digit_string):
 
   Returns
   -------
-  n/a : tuple
+  tuple
     A six-tuple with the features of a MAC address.
 
     The features are `type`, `has_oui`, `has_cid`, 
@@ -132,7 +132,7 @@ def get_features(digit_strings):
 
   Returns
   -------
-  n/a : list
+  list
     A list of tuples, where each tuple contains 
     the features of a MAC address.
   """
@@ -157,7 +157,7 @@ def normalize_features(features):
 
   Returns
   -------
-  n/a : numpy array
+  numpy array
     A numpy array with the normalized features
     of MAC addresses, where normalization
     means replacing non-numeric with numeric
@@ -188,12 +188,12 @@ def make_labels(value, number):
     MAC addresses and `1` means a random
     MAC address.
 
-  number :
+  number : int
     The number of labels.
 
   Returns
   -------
-  n/a : list
+  list
     A list with the given number of the
     given label.  
   """
@@ -217,7 +217,7 @@ def normalize_labels(labels):
 
   Returns
   -------
-  n/a : numpy array
+  numpy array
     A numpy array with normalized labels, 
     where normalization means converting the 
     container from a list to a numpy array.
@@ -246,7 +246,7 @@ def make(multiple, oui_file="./oui.csv", cid_file="./cid.csv"):
 
   Returns
   -------
-  n/a : tuple
+  tuple
     A tuple with data (features) and labels.
   """
 

@@ -14,7 +14,7 @@ def make():
 
   Returns
   -------
-  n/a : sklearn classifier
+  sklearn classifier
     A classifier.
   """
 
@@ -40,7 +40,7 @@ def train(classifier, data, labels):
 
   Returns
   ------
-  n/a : sklearn classifier
+  sklearn classifier
     The trained classifier.
   """
 
@@ -66,7 +66,7 @@ def test(classifier, data, labels):
 
   Returns
   ------
-  n/a : float
+  float
     The results of the test.
   """
 
@@ -101,7 +101,7 @@ def restore(file="random-mac-classifier.pickled"):
 
   Returns
   -------
-  n/a : sklearn classifier
+  sklearn classifier
     The restored (unpickled) classifier.
   """
 
@@ -124,7 +124,7 @@ def is_random_mac(classifier, address):
 
   Returns
   -------
-  n/a : bool
+  bool
     Whether the given MAC address is random
     (True) or non-random (False).
   """
