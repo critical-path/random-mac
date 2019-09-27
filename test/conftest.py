@@ -19,7 +19,7 @@ def oui_file(tmp_path):
   file.write_text("Assignment,\na0b1c2,\n")
 
   # Yield the file.
-  yield file.as_posix()
+  yield file
 
 
 # This fixture approximates `cid.csv`.
@@ -39,7 +39,7 @@ def cid_file(tmp_path):
   file.write_text("Assignment,\n0a1b2c,\n")
 
   # Yield the file.
-  yield file.as_posix()
+  yield file
 
 
 # This fixture represents the output of 
@@ -142,4 +142,4 @@ def pickle_file(tmp_path):
   file = subdirectory.joinpath("test-classifier.pickled")
 
   # Yield the path to the pickle file.
-  yield file.as_posix()
+  yield file
