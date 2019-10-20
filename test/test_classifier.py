@@ -1,3 +1,4 @@
+import os
 import numpy
 import random_mac.classifier
 import sklearn.linear_model
@@ -36,3 +37,11 @@ def test_save_and_restore(fitted_classifier, pickle_file):
 
   results = random_mac.classifier.restore(file=pickle_file)
   assert isinstance(results, sklearn.linear_model.SGDClassifier)
+
+
+def test_is_random_mac(fitted_classifier):
+  results = random_mac.classifier.is_random_mac(
+    fitted_classifier, 
+    os.urandom(6).hex()
+  )
+  assert isinstance(results, bool)
